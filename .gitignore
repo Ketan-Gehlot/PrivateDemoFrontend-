@@ -1,0 +1,61 @@
+# dependencies
+/node_modules
+node_modules/
+
+# production
+/dist
+/build
+/dist-ssr
+*.tsbuildinfo
+
+# environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# testing
+/coverage
+
+# mac
+.DS_Store
+
+# windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+
+# caches
+.eslintcache
+.stylelintcache
+.npm
+.yarn
+.pnp.*
+
+# vercel/turbo
+.vercel
+.turbo
+
+# agents/misc
+.gemini/
+.agents/

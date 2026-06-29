@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 172 72% 30%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 38 35% 94%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 16% 43%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 22% 86%;
+    --input: 214 22% 86%;
+    --ring: 172 72% 30%;
+    --success: 158 64% 38%;
+    --warning: 39 92% 50%;
+    --info: 199 89% 48%;
+    --radius: 8px;
+  }
+
+  .dark {
+    --background: 225 18% 9%;
+    --foreground: 210 20% 96%;
+    --card: 225 16% 13%;
+    --card-foreground: 210 20% 96%;
+    --popover: 225 16% 13%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 170 70% 42%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 220 12% 18%;
+    --secondary-foreground: 210 20% 96%;
+    --muted: 220 12% 19%;
+    --muted-foreground: 215 14% 68%;
+    --accent: 199 89% 56%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 72% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 12% 24%;
+    --input: 220 12% 24%;
+    --ring: 170 70% 42%;
+    --success: 158 64% 44%;
+    --warning: 39 92% 56%;
+    --info: 199 89% 56%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family:
+      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    letter-spacing: 0;
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(var(--primary)/0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(var(--accent)/0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(var(--success)/0.15) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(var(--warning)/0.15) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    letter-spacing: 0;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.18);
+  }
+}
+
+@layer components {
+  .focus-ring {
+    @apply outline-none ring-offset-2 ring-offset-background focus-visible:ring-2 focus-visible:ring-ring;
+  }
+
+  .dashboard-grid {
+    @apply grid gap-4 sm:grid-cols-2 xl:grid-cols-4;
+  }
+
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-md border border-white/10 shadow-glass transition-all duration-300;
+  }
+
+  .dark .glass-card {
+    @apply bg-card/40 border-white/5;
+  }
+}

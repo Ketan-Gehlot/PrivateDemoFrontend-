@@ -1,0 +1,31 @@
+{
+  "name": "koinx-tax-loss-harvesting",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Production-grade Tax Loss Harvesting Dashboard with React, Express, Prisma and PostgreSQL.",
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w apps/web",
+    "build": "npm run build -w apps/web",
+    "lint": "eslint \"apps/**/*.{ts,tsx}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md,css,prisma}\"",
+    "typecheck": "npm run typecheck -w apps/web"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.7",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  }
+}
